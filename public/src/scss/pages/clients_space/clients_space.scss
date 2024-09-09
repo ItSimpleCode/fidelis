@@ -1,0 +1,139 @@
+@import "../../layouts/global";
+@import "../../layouts/card";
+// @import "../../layouts/backgrounds";
+
+body {
+    font-family: 'Sora';
+    display: revert;
+}
+
+.container {
+    margin: auto;
+    max-width: 700px;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 48px;
+
+    .card,
+    .body {
+        width: 100%;
+    }
+}
+
+
+.card {
+    padding: 15px;
+
+    .card-2 {
+        width: 100%;
+        max-width: 500px;
+        height: 282px;
+        margin: auto;
+    }
+}
+
+.body {
+    flex: 1;
+    padding: 0 15px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 24px;
+
+    .nav {
+
+        ul {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            li {
+                flex: 1;
+
+                a {
+                    text-transform: capitalize;
+                    text-align: center;
+                    text-decoration: none;
+                    padding: 8px;
+                    display: block;
+                    border-bottom: 2px solid #000;
+                    opacity: 0.45;
+
+                    &.selected {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.title {
+    text-transform: uppercase;
+
+    .text {
+        font-size: 13px;
+    }
+
+    .wallet {
+        font-size: 37px;
+    }
+}
+
+.list {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+.data {
+    flex: 1;
+    overflow: auto;
+
+
+    ul {
+        display: flex;
+        flex-flow: column nowrap;
+        row-gap: 12px;
+        padding: 24px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: #212121;
+
+        &,
+        & .service {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 12px;
+        }
+
+        .img {
+            width: 50px;
+            height: 50px;
+            background-color: #1A2431;
+            border-radius: 12px;
+        }
+
+        .service {
+
+            span {
+                font-size: 13px;
+                font-weight: 500;
+            }
+        }
+
+        .cost {
+            color: red;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+    }
+}

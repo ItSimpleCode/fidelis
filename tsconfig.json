@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es5",
+        "outDir": "./public/dist/js",
+        "rootDir": "./public/src/ts",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowJs": false // Explicitly set to false
+    }
+}

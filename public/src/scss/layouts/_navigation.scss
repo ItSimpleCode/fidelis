@@ -1,0 +1,261 @@
+$bg1: #EEEFF3;
+$navbg: #fff;
+$navHeight: 80px;
+
+header {
+    width: calc(100% - 48px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    margin: 24px 24px 0 24px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 24px;
+
+    .aside-toggle {
+        width: ($navHeight - 24px);
+        height: ($navHeight - 24px);
+
+        padding: 0 !important;
+
+        &,
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        i {
+            font-size: 20px;
+
+        }
+
+        @media (orientation: landscape) and (min-width: 1140px) {
+            display: none !important;
+        }
+
+
+    }
+
+    .nav {
+        flex: 1;
+
+        height: $navHeight;
+    }
+
+    button {
+
+        &,
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.aside-toggle svg {
+            width: 24px;
+            height: 24px;
+
+            .stroke {
+                stroke: #252C58;
+            }
+
+            .fill {
+                fill: #252C58;
+            }
+        }
+    }
+
+    .logo {
+        // background-color: $bg1;
+        width: 191.47px;
+        height: 100%;
+        border-radius: 12px;
+        padding: 12px;
+
+        @media (orientation: portrait) or ((orientation: landscape) and (max-width: 1139px)) {
+            width: fit-content;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+    }
+
+    .user {
+        position: relative;
+
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        column-gap: 12px;
+
+        .user-pic {
+            width: 48px;
+            height: 48px;
+
+            border-radius: 24px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .user_info {
+            display: flex;
+            flex-flow: column nowrap;
+            text-transform: capitalize;
+        }
+
+        .sub-list {
+            position: absolute;
+            top: 100%;
+            right: 0;
+
+            background-color: #eee;
+
+            min-width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+
+            align-items: flex-start;
+
+            ul {
+                display: flex;
+                flex-flow: column nowrap;
+            }
+
+            a,
+            button {
+                width: 100%;
+                padding: 3px;
+                border-radius: 3px;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                column-gap: 6px;
+
+                background-color: transparent;
+                color: #212121;
+                font-size: 16px;
+                font-family: 'sora';
+
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+        }
+    }
+
+    .date {
+        position: relative;
+
+        .date-btn {
+            background-color: #332F85;
+        }
+
+        .sub-list {
+            align-items: stretch;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background-color: #fff;
+
+            padding: 12px;
+            border-radius: 12px;
+
+            display: none;
+
+            & > div {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 12px;
+
+                text-transform: capitalize;
+            }
+
+            label {
+                user-select: none;
+            }
+
+            button[type=submit] {
+                padding: 6px 12px;
+                border-radius: 6px;
+                background-color: #3354F4;
+                color: #fff;
+            }
+        }
+
+        input {
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            height: fit-content;
+            padding: 6px 12px;
+            border-radius: 6px;
+            overflow: hidden;
+
+            background-color: #eee;
+            font-size: 16px;
+
+            &::-webkit-calendar-picker-indicator {
+                display: none;
+                -webkit-appearance: none;
+            }
+
+            &::-moz-calendar-picker-indicator {
+                display: none;
+                -moz-appearance: none;
+            }
+
+            &::-ms-clear {
+                display: none;
+                width: 0;
+                height: 0;
+            }
+
+        }
+    }
+
+    .user,
+    .date {
+        .sub-list {
+            display: none;
+            flex-flow: column nowrap;
+            row-gap: 6px;
+
+            &.show {
+                display: flex;
+            }
+        }
+    }
+
+    .options {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        column-gap: 24px;
+    }
+
+    .pdf-btn {
+        background-color: #ED0F02;
+        color: #fff;
+
+        // text-transform: capitalize;
+        // font-weight: 700;
+    }
+
+}
